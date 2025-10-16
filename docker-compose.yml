@@ -13,6 +13,8 @@ services:
         - POSTGRES_USER=${DBUSER}
         - POSTGRES_PASSWORD=${DBPASS}
       restart: always
+      ports:
+        - "${SQL_PORT}"
       networks:
         billionmail-network:
           aliases:
@@ -26,6 +28,8 @@ services:
         - ./redis-data:/data
         - ./conf/redis/redis-conf.sh:/redis-conf.sh
       restart: always
+      ports:
+        - "${REDIS_PORT}"
       environment:
         - TZ=${TZ}
         - REDISPASS=${REDISPASS}
