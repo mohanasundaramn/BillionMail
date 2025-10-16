@@ -120,6 +120,7 @@ services:
         - ./postfix-data:/var/spool/postfix
         - ./rspamd-data:/var/lib/rspamd
         - ./postgresql-socket:/var/run/postgresql
+        - ./data/postfix/spool:/var/spool/postfix
       environment:
         - TZ=${TZ}
         - DBNAME=${DBNAME}
