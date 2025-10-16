@@ -180,4 +180,4 @@ services:
       - ./vmail-data:/opt/billionmail/vmail-data
     environment:
       - TZ=${TZ}
-      - FAIL2BAN_INIT=${FAIL2BAN_INIT:-y
+      - FAIL2BAN_INIT=${FAIL2BAN_INIT:-y}
